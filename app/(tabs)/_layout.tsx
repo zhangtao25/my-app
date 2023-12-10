@@ -25,7 +25,8 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
+            headerShown:false,
+          title: 'Home',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
@@ -43,10 +44,24 @@ export default function TabLayout() {
           ),
         }}
       />
+        <Tabs.Screen
+            name="explore"
+            options={{
+                title: '探索',
+                tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+            }}
+        />
+        <Tabs.Screen
+            name="add"
+            options={{
+                title: '发布',
+                tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+            }}
+        />
       <Tabs.Screen
         name="two"
         options={{
-          title: 'Tab Two',
+          title: 'Me',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
